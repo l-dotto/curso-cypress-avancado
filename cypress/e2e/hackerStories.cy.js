@@ -1,8 +1,13 @@
-describe('Hacker Stories', () => {
-  beforeEach(() => {
-    cy.visit('/')
 
-    cy.assertLoadingIsShownAndHidden()
+const options = { env: { snapshotOnly: true } }
+
+describe('Hacker Stories', options, () => {
+  beforeEach(() => {
+    const newTerm = 'React'
+    cy.api_hackersStories(newTerm, 0).as('getStories')
+  
+    cy.visit('/')
+    cy.wait('@getStories')
     cy.contains('More').should('be.visible')
   })
 
@@ -21,11 +26,13 @@ describe('Hacker Stories', () => {
     it.skip('shows the right data for all rendered stories', () => {})
 
     it('shows 20 stories, then the next 20 after clicking "More"', () => {
-      cy.get('.item').should('have.length', 20)
 
+      cy.api_hackersStories('React', '1').as('getNextPage')
+
+      cy.get('.item').should('have.length', 20)
       cy.contains('More').click()
 
-      cy.assertLoadingIsShownAndHidden()
+      cy.wait('@getNextPage')
 
       cy.get('.item').should('have.length', 40)
     })
@@ -73,10 +80,12 @@ describe('Hacker Stories', () => {
     })
 
     it('types and hits ENTER', () => {
+
+      cy.api_hackersStories(newTerm, 0).as('getEnterStories')
+
       cy.get('#search')
         .type(`${newTerm}{enter}`)
-
-      cy.assertLoadingIsShownAndHidden()
+      cy.wait('@getEnterStories')
 
       cy.get('.item').should('have.length', 20)
       cy.get('.item')
@@ -87,12 +96,13 @@ describe('Hacker Stories', () => {
     })
 
     it('types and clicks the submit button', () => {
+      cy.api_hackersStories(newTerm, 0).as('getClickStories')
+
       cy.get('#search')
         .type(newTerm)
       cy.contains('Submit')
         .click()
-
-      cy.assertLoadingIsShownAndHidden()
+      cy.wait('@getClickStories')
 
       cy.get('.item').should('have.length', 20)
       cy.get('.item')
@@ -104,16 +114,18 @@ describe('Hacker Stories', () => {
 
     context('Last searches', () => {
       it('searches via the last searched term', () => {
+        cy.api_hackersStories(newTerm, 0).as('getNewTerm')
         cy.get('#search')
           .type(`${newTerm}{enter}`)
 
-        cy.assertLoadingIsShownAndHidden()
+        cy.wait('@getNewTerm')
 
+        cy.api_hackersStories(initialTerm, 0).as('getInitialTerm')
         cy.get(`button:contains(${initialTerm})`)
           .should('be.visible')
           .click()
 
-        cy.assertLoadingIsShownAndHidden()
+        cy.wait('@getInitialTerm')
 
         cy.get('.item').should('have.length', 20)
         cy.get('.item')
@@ -123,20 +135,35 @@ describe('Hacker Stories', () => {
           .should('be.visible')
       })
 
-      it('shows a max of 5 buttons for the last searched terms', () => {
+      it('shows a max of 5 buttons for the last searched terms', options, () => {
         const faker = require('faker')
+        cy.api_hackersStories('*', 0).as('getMaxButtons')
 
         Cypress._.times(6, () => {
           cy.get('#search')
             .clear()
-            .type(`${faker.random.word()}{enter}`)
+            .type(`${faker.random.words()}{enter}`)
+          cy.wait('@getMaxButtons')
         })
-
-        cy.assertLoadingIsShownAndHidden()
 
         cy.get('.last-searches button')
           .should('have.length', 5)
-      })
+      })    
     })
+})
+})
+
+context('Request errors', () => {
+  const newTerm = 'React'
+  it('Show error when network fails', () => {
+    // Simula o erro de rede
+    cy.err_api_hackersStories(newTerm, 0).as('getNetworkError')
+    cy.visit('/')
+    cy.get('#search')
+      .clear()
+      .type(`${newTerm}{enter}`)
+    cy.wait('@getNetworkError')
+    cy.contains('Something went wrong')
+      .should('be.visible')
   })
 })

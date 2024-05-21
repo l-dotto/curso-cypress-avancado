@@ -32,9 +32,10 @@
   "license": "MIT",
   "homepage": "https://github.com/wlsf82/curso-cypress-avancado#readme",
   "devDependencies": {
-    "cypress": "^6.6.0",
+    "cypress": "^13.9.0",
     "cypress-localstorage-commands": "^1.4.1",
-    "faker": "^5.4.0",
+    "cypress-plugin-api": "^2.11.1",
+    "faker": "^5.5.3",
     "standardjs": "^1.0.0-alpha"
   }
 }
