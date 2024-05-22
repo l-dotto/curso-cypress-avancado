@@ -4,10 +4,15 @@
   "description": "Projeto do curso avançado de Cypress da Escola TAT",
   "main": "index.js",
   "scripts": {
-    "lint": "npx standard",
-    "lint:fix": "npx standard --fix",
-    "test": "cypress run --reporter nyan",
-    "cy:open": "cypress open"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint cypress/**/*.js && eslint cypress.config.js",
+    "lint:fix": "eslint cypress/**/*.js --fix && eslint cypress.conf.js --fix",
+    "cy:open": "cypress open",
+    "cy:test": "cypress run cypress/e2e/**/*.js",
+    "cy:open:tablet": "cypress open --config viewportWidth=767,viewportHeight=480",
+    "test:tablet": "cypress run --config viewportWidth=767,viewportHeight=480 --spec cypress/e2e/authenticated.cy.js",
+    "test:cloud": "cypress run",
+    "test:tablet:cloud": "cypress run --config viewportWidth=767,viewportHeight=480 --spec cypress/e2e/*cy.js"
   },
   "standard": {
     "globals": [
