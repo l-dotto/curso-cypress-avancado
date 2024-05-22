@@ -1,0 +1,277 @@
+{
+    "exhaustive": {
+        "nbHits": false,
+        "typo": false
+    },
+    "exhaustiveNbHits": false,
+    "exhaustiveTypo": false,
+    "hits": [
+        {
+            "_highlightResult": {
+                "author": {
+                    "matchLevel": "none",
+                    "matchedWords": [],
+                    "value": "OJFord"
+                },
+                "title": {
+                    "fullyHighlighted": false,
+                    "matchLevel": "full",
+                    "matchedWords": [
+                        "cypress"
+                    ],
+                    "value": "<em>Cypress</em>: Fast, easy, and reliable testing for anything that runs in a browser"
+                },
+                "url": {
+                    "fullyHighlighted": false,
+                    "matchLevel": "full",
+                    "matchedWords": [
+                        "cypress"
+                    ],
+                    "value": "https://www.<em>cypress</em>.io/"
+                }
+            },
+            "_tags": [
+                "story",
+                "author_OJFord",
+                "story_25381242"
+            ],
+            "author": "OJFord",
+            "children": [
+                25381271,
+                25381382,
+                25381398,
+                25381559,
+                25381593,
+                25381599,
+                25381613,
+                25381634,
+                25381646,
+                25381678,
+                25381679,
+                25381735,
+                25381805,
+                25381810,
+                25381842,
+                25381984,
+                25382005,
+                25382071,
+                25382120,
+                25382258,
+                25382286,
+                25382554,
+                25382568,
+                25382595,
+                25382762,
+                25383166,
+                25383173,
+                25383210,
+                25383410,
+                25383423,
+                25383493,
+                25383647,
+                25383715,
+                25383744,
+                25384914,
+                25384949,
+                25385362,
+                25385442,
+                25385575,
+                25385815,
+                25385997,
+                25386294,
+                25387408,
+                25387416,
+                25387965,
+                25388098,
+                25388142,
+                25388386,
+                25396178,
+                25397245,
+                25411413
+            ],
+            "created_at": "2020-12-11T01:35:56Z",
+            "created_at_i": 1607650556,
+            "num_comments": 178,
+            "objectID": "25381242",
+            "points": 316,
+            "story_id": 25381242,
+            "title": "Cypress: Fast, easy, and reliable testing for anything that runs in a browser",
+            "updated_at": "2023-09-07T08:14:24Z",
+            "url": "https://www.cypress.io/"
+        },
+        {
+            "_highlightResult": {
+                "author": {
+                    "matchLevel": "none",
+                    "matchedWords": [],
+                    "value": "kiyanwang"
+                },
+                "title": {
+                    "fullyHighlighted": false,
+                    "matchLevel": "full",
+                    "matchedWords": [
+                        "cypress"
+                    ],
+                    "value": "Testing React Apps in 2022 with <em>Cypress</em>: An In-Depth Guide for Beginners"
+                },
+                "url": {
+                    "fullyHighlighted": false,
+                    "matchLevel": "full",
+                    "matchedWords": [
+                        "cypress"
+                    ],
+                    "value": "https://profy.dev/article/<em>cypress</em>-react"
+                }
+            },
+            "_tags": [
+                "story",
+                "author_kiyanwang",
+                "story_33047136"
+            ],
+            "author": "kiyanwang",
+            "children": [
+                33047394,
+                33047754,
+                33047998,
+                33049047,
+                33050469,
+                33050899,
+                33050985,
+                33051030,
+                33054579,
+                33054967
+            ],
+            "created_at": "2022-10-01T15:07:13Z",
+            "created_at_i": 1664636833,
+            "num_comments": 38,
+            "objectID": "33047136",
+            "points": 82,
+            "story_id": 33047136,
+            "title": "Testing React Apps in 2022 with Cypress: An In-Depth Guide for Beginners",
+            "updated_at": "2024-03-16T22:58:50Z",
+            "url": "https://profy.dev/article/cypress-react"
+        },
+        {
+            "_highlightResult": {
+                "author": {
+                    "matchLevel": "none",
+                    "matchedWords": [],
+                    "value": "madmax108"
+                },
+                "title": {
+                    "fullyHighlighted": false,
+                    "matchLevel": "full",
+                    "matchedWords": [
+                        "cypress"
+                    ],
+                    "value": "<em>Cypress</em>.io Blocking of Sorry <em>Cypress</em> and Currents"
+                },
+                "url": {
+                    "matchLevel": "none",
+                    "matchedWords": [],
+                    "value": "https://currents.dev/posts/v13-blocking"
+                }
+            },
+            "_tags": [
+                "story",
+                "author_madmax108",
+                "story_37842778"
+            ],
+            "author": "madmax108",
+            "children": [
+                37844004,
+                37844036,
+                37844108,
+                37844126,
+                37844288,
+                37844424,
+                37844870,
+                37845005,
+                37845291,
+                37845498,
+                37845727,
+                37845743,
+                37846219,
+                37846650,
+                37846694,
+                37846779,
+                37856046,
+                37868171
+            ],
+            "created_at": "2023-10-11T10:24:41Z",
+            "created_at_i": 1697019881,
+            "num_comments": 54,
+            "objectID": "37842778",
+            "points": 78,
+            "story_id": 37842778,
+            "title": "Cypress.io Blocking of Sorry Cypress and Currents",
+            "updated_at": "2024-02-14T19:40:15Z",
+            "url": "https://currents.dev/posts/v13-blocking"
+        },
+        {
+            "_highlightResult": {
+                "author": {
+                    "matchLevel": "none",
+                    "matchedWords": [],
+                    "value": "monkey_monkey"
+                },
+                "title": {
+                    "fullyHighlighted": false,
+                    "matchLevel": "full",
+                    "matchedWords": [
+                        "cypress"
+                    ],
+                    "value": "Ancient <em>cypress</em> in Chile may be the world’s oldest tree, new study suggests"
+                },
+                "url": {
+                    "fullyHighlighted": false,
+                    "matchLevel": "full",
+                    "matchedWords": [
+                        "cypress"
+                    ],
+                    "value": "https://www.theguardian.com/environment/2022/may/26/worlds-oldest-tree-<em>cypress</em>-chile"
+                }
+            },
+            "_tags": [
+                "story",
+                "author_monkey_monkey",
+                "story_31516252"
+            ],
+            "author": "monkey_monkey",
+            "created_at": "2022-05-26T09:13:28Z",
+            "created_at_i": 1653556408,
+            "num_comments": 0,
+            "objectID": "31516252",
+            "points": 23,
+            "story_id": 31516252,
+            "title": "Ancient cypress in Chile may be the world’s oldest tree, new study suggests",
+            "updated_at": "2023-09-07T11:15:29Z",
+            "url": "https://www.theguardian.com/environment/2022/may/26/worlds-oldest-tree-cypress-chile"
+        }
+    ],
+    "hitsPerPage": 4,
+    "nbHits": 70847,
+    "nbPages": 250,
+    "page": 0,
+    "params": "query=cypress&page=0&hitsPerPage=4&advancedSyntax=true&analyticsTags=backend",
+    "processingTimeMS": 16,
+    "processingTimingsMS": {
+        "_request": {
+            "roundTrip": 14
+        },
+        "afterFetch": {
+            "merge": {
+                "total": 1
+            },
+            "total": 1
+        },
+        "fetch": {
+            "query": 13,
+            "scanning": 1,
+            "total": 14
+        },
+        "total": 16
+    },
+    "query": "cypress",
+    "serverTimeMS": 17
+}

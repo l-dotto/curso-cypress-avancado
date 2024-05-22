@@ -16,6 +16,8 @@
 // Import commands.js using ES2015 syntax:
 import 'cypress-plugin-api'
 import './commands'
+import 'cypress-localstorage-commands'
+//import '@faker-js/faker'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
