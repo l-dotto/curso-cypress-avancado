@@ -30,15 +30,7 @@ describe('Testing application Hacker News', options, () => {
               .should('be.length', 100)
         })
 
-        it('shoud be use cache after first seach', () => {
-            cy.request(`/api/v1/search?query=${initialTerm}&page=0&hitsPerPage=4`)
-              .then((secondResponse) => {
-                expect(secondResponse.duration).to.be.lessThan(100)
-                expect(secondResponse.body).to.deep.equal(firstApiResponse.body)
-            })
-        })
-
-        it('shows 100 stories, then the next 200 after clicking "More"', () => {
+        it('shows 100 stories, then 200 after clicking "More"', () => {
             cy.get('.table-row')
             .should('be.length', 100)
 
@@ -48,6 +40,14 @@ describe('Testing application Hacker News', options, () => {
 
             cy.get('.table-row')
               .should('be.length', 200)
+        })
+
+        it('shoud be use cache after first seach', () => {
+          cy.request(`/api/v1/search?query=${initialTerm}&page=0&hitsPerPage=4`)
+            .then((secondResponse) => {
+              expect(secondResponse.duration).to.be.lessThan(100)
+              expect(secondResponse.body).to.deep.equal(firstApiResponse.body)
+          })
         })
     })
 
