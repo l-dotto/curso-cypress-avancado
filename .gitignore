@@ -2,6 +2,6 @@
 cypress/screenshots/
 cypress/videos/
 node_modules/
+.node_modules
 .cypress.env.js
 .cypress.env
-
